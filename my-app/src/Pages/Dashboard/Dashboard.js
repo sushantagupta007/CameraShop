@@ -9,8 +9,10 @@ import Payment from './../Payment/Payment';
 import ManageOrder from './../Admin/Manage Order/ManageOrder';
 import AddProduct from './../Admin/Add Product/AddProduct';
 import MakeAdmin from './../Admin/Make Admin/MakeAdmin';
+import ManageProduct from './../Admin/ManageProduct/ManageProduct';
 
 import {
+
 
    BrowserRouter as Router,
     Switch,
@@ -64,6 +66,7 @@ const Dashboard = () => {
                 <Nav defaultActiveKey="/home" className="flex-column">
                     <NavLink className="my-3" to={`${url}/manageorder`}>Manage Order</NavLink>
                     <NavLink className="my-3" to={`${url}/addproduct`}>Add Product</NavLink>
+                    <NavLink className="my-3" to={`${url}/manageproduct`}>Manage Product</NavLink>
                     <NavLink className="my-3" to={`${url}/makeadmin`}>Make Admin</NavLink>
                     <button className="btn btn-danger" type="button"> Logout</button>
                 </Nav>
@@ -72,6 +75,7 @@ const Dashboard = () => {
                     <Switch>
                         <Route path={`${path}/manageorder`}> <ManageOrder></ManageOrder></Route>
                         <Route path={`${path}/addproduct`}> <AddProduct></AddProduct></Route>
+                        <Route path={`${path}/manageproduct`}> <ManageProduct></ManageProduct></Route>
                         <Route path={`${path}/makeadmin`}> <MakeAdmin></MakeAdmin></Route>
                     </Switch>
                 </Col>

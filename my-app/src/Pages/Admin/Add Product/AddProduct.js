@@ -20,7 +20,8 @@ const AddProduct = () => {
         if(data.name===""||data.description===""){
             return 
         }
-        fetch('http://localhost:5000/allProducts',{
+        
+        fetch('https://sleepy-ridge-11982.herokuapp.com/allProducts',{
             method:"POST",
             headers:{"content-type":"application/json"},
             body:JSON.stringify(data)

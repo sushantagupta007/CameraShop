@@ -8,7 +8,7 @@ const ManageProduct = () => {
     
     
     useEffect(()=>{
-        fetch('http://localhost:5000/allProducts')
+        fetch('https://sleepy-ridge-11982.herokuapp.com/allProducts')
             .then(res=>res.json())
             .then(data=>{
                 setProducts(data)
@@ -19,7 +19,7 @@ const ManageProduct = () => {
         const adminInterest = prompt("Are You Sure Want to Cancel Order")
         if(adminInterest==='yes'||'ok')
         {
-            const url = `http://localhost:5000/allProducts?id=${id}`
+            const url = `https://sleepy-ridge-11982.herokuapp.com/allProducts?id=${id}`
             fetch(url,{
                 method:"DELETE"
             })

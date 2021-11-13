@@ -15,7 +15,7 @@ const Order = () => {
      
     let i=1; 
     useEffect(()=>{
-        const url = `http://localhost:5000/myorder?email=${userEmail}`
+        const url = `https://sleepy-ridge-11982.herokuapp.com/myorder?email=${userEmail}`
         fetch(url)
         .then(res=>res.json())
         .then(data=>{
@@ -28,7 +28,7 @@ const Order = () => {
         const userInterest = prompt("Are You Sure Want to Cancel Order")
         if(userInterest==='yes'||'ok')
         {
-            const url = `http://localhost:5000/myorder?id=${id}`
+            const url = `https://sleepy-ridge-11982.herokuapp.com/myorder?id=${id}`
             fetch(url,{
                 method:"DELETE"
             })

@@ -16,7 +16,7 @@ const Register = () => {
     const {registerUser,user}= useAuth(); 
     const onSubmit = data => {
         registerUser(data.name,data.email,data.password,history)
-        fetch('http://localhost:5000/users',{
+        fetch('https://sleepy-ridge-11982.herokuapp.com/users',{
             method:"POST",
             headers:{"content-type":"application/json"},
             body:JSON.stringify(data)

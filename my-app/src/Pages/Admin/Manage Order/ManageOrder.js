@@ -12,13 +12,13 @@ const ManageOrder = () => {
     let i=1;
 
     const handleUpdate=(id)=>{
-        fetch(`http://localhost:5000/allmyorder/${id}`)
+        fetch(`https://sleepy-ridge-11982.herokuapp.com/allmyorder/${id}`)
             .then(res=>res.json())
             .then(data=>{
                 setSingleOrder(data)
                 console.log(data)
             })
-        fetch(`http://localhost:5000/allmyorder/${id}`,{
+        fetch(`https://sleepy-ridge-11982.herokuapp.com/allmyorder/${id}`,{
             method:"PUT",
             headers:{"content-type":"application/json"},
             body:JSON.stringify(singleOrder)
@@ -27,7 +27,7 @@ const ManageOrder = () => {
     }
    
     useEffect(()=>{
-        fetch('http://localhost:5000/allmyorder')
+        fetch('https://sleepy-ridge-11982.herokuapp.com/allmyorder')
             .then(res=>res.json())
             .then(data=>{
                 setallOrder(data)

@@ -11,7 +11,7 @@ const Products = () => {
     const history = useHistory(); 
     console.log(history.location.pathname)
     useEffect(()=>{
-        fetch('http://localhost:5000/allProducts')
+        fetch('https://sleepy-ridge-11982.herokuapp.com/allProducts')
             .then(res=>res.json())
             .then(data=>{
                 setallProducts(data)

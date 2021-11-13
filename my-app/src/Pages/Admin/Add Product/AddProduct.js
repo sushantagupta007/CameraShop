@@ -1,18 +1,16 @@
 import React from 'react';
-import useAuth from './../../../Hooks/useAuth';
+
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Alert } from 'react-bootstrap';
-import axios from 'axios';
+
 
 
 
 const AddProduct = () => {
-    const {user} = useAuth(); 
+    
     const [response,setResponse] = useState({})
-    const [image,setImage] = useState({
-        image:null,
-    });
+   
 
 
     const { register, handleSubmit,reset } = useForm();
@@ -32,19 +30,7 @@ const AddProduct = () => {
             reset(); 
         })
         
-    };
-
-    const handleChange = (e) => {
-        if (e.target.name === "image") {
-            const image =URL.createObjectURL(e.target.files[0])
-            setImage(image)
-        } else {
-            setImage([e.target.name]= e.target.value)
-          }
-        
-        console.log("final payload", this.state)
-      }
-        
+    };      
 
     return (
         <div>
@@ -68,7 +54,7 @@ const AddProduct = () => {
         />
         <label className="fw-bold">Product Image </label>
             <input 
-                onChange={handleChange}
+                
                 name="product image"
                 className="my-1"
                 type="file" 

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Alert } from 'react-bootstrap';
-import { useHistory } from 'react-router';
 
 
-import useAuth from './../../Hooks/useAuth';
+
+
 import { useForm } from 'react-hook-form';
 
 // import './Purchase.css'
@@ -13,7 +13,7 @@ import { useState } from 'react';
 
 
 const Review = () => {
-    const {user} = useAuth(); 
+    
     const [response,setResponse] = useState({})
     
 

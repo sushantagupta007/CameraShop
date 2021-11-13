@@ -46,7 +46,7 @@ const Purchase = () => {
     };
     
     const {name,img,price} = history.location.state; 
-    const status = {status:"pending"}
+    
     console.log(img)
         return (
     <>  

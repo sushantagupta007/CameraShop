@@ -1,7 +1,7 @@
 import React from 'react';
-import { Col, Container, Row, Nav, Offcanvas,Button} from 'react-bootstrap';
+import { Col, Container, Row, Nav} from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
-import { useState } from 'react';
+
 import useAuth from './../../Hooks/useAuth';
 import Order from '../Orders/Order/Order';
 import Review from './../Review/Review';
@@ -13,13 +13,8 @@ import ManageProduct from './../Admin/ManageProduct/ManageProduct';
 import {useHistory} from 'react-router'
 
 import {
-
-
-   BrowserRouter as Router,
     Switch,
     Route,
-    Link,
-    useParams,
     useRouteMatch
   } from "react-router-dom";
 

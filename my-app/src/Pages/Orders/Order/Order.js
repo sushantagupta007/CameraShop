@@ -12,7 +12,7 @@ const Order = () => {
     
     
     const [myorders,setOrder] =useState([]); 
-    const [remaininUser, setremainingUser] = useState([]); 
+     
     let i=1; 
     useEffect(()=>{
         const url = `http://localhost:5000/myorder?email=${userEmail}`

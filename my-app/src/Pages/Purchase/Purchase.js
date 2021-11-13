@@ -46,6 +46,7 @@ const Purchase = () => {
     };
     
     const {name,img,price} = history.location.state; 
+    const status = {status:"pending"}
     console.log(img)
         return (
     <>  
@@ -122,6 +123,13 @@ const Purchase = () => {
                         className="my-1"
                         type="number" 
                         {...register("phonenumber",{maxLength:12,required:true})} 
+                    />
+                    <label className="fw-bold">Stauts</label>
+                    <input 
+                        defaultValue="Pending"
+                        className="my-1"
+                        type="text" 
+                        {...register("status")} 
                     />
                     <hr/>
                     <input className="btn-warning fw-bold" type="submit" value="Purchase" />

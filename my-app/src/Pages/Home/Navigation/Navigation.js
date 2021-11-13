@@ -16,7 +16,7 @@ const Navigation = () => {
   <Container>
     <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    <Navbar.Collapse id="basic-navbar-nav">npm
+    <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto ">
         <NavLink className="me-3" to="/home">Home</NavLink>
         <NavLink className="me-3" to="/products">Explore Products</NavLink>

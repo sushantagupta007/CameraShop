@@ -3,15 +3,25 @@ import useAuth from './../../../Hooks/useAuth';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Alert } from 'react-bootstrap';
+import axios from 'axios';
+
+
 
 const AddProduct = () => {
     const {user} = useAuth(); 
     const [response,setResponse] = useState({})
-    
+    const [image,setImage] = useState({
+        image:null,
+    });
+
 
     const { register, handleSubmit,reset } = useForm();
 
     const onSubmit = data => {
+        console.log(data)
+        if(data.name===""||data.description===""){
+            return 
+        }
         fetch('http://localhost:5000/allProducts',{
             method:"POST",
             headers:{"content-type":"application/json"},
@@ -23,6 +33,19 @@ const AddProduct = () => {
         })
         
     };
+
+    const handleChange = (e) => {
+        if (e.target.name === "image") {
+            const image =URL.createObjectURL(e.target.files[0])
+            setImage(image)
+        } else {
+            setImage([e.target.name]= e.target.value)
+          }
+        
+        console.log("final payload", this.state)
+      }
+        
+
     return (
         <div>
             <h3 className="text-center"> Add Product</h3>
@@ -45,17 +68,21 @@ const AddProduct = () => {
         />
         <label className="fw-bold">Product Image </label>
             <input 
+                onChange={handleChange}
+                name="product image"
                 className="my-1"
                 type="file" 
                 
                 {...register("image")} 
             />
+            
         <hr/>
             <input className="btn-warning fw-bold" type="submit" value="Add Product" />
         </form>
-    </div>    
+        </div>    
     
     );
-};
+
+    }
 
 export default AddProduct;

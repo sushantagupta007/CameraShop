@@ -54,9 +54,9 @@ function App() {
       <PrivateRoute path="/myorder">
         <Order></Order>
       </PrivateRoute>
-      <PrivateRoute path="/review">
+      <Route path="/review">
         <Review></Review>
-      </PrivateRoute>
+      </Route>
       <Route exact path="/">
         <Home></Home>
       </Route>

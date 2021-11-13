@@ -1,4 +1,5 @@
 import React from 'react';
+import Contact from '../Contact/Contact';
 import Footer from '../Footer/Footer';
 
 import Products from '../Products/Products';
@@ -15,7 +16,7 @@ const Home = () => {
             <hr/>
             <Review></Review>
             <hr/>
-            
+            <Contact></Contact>
             <Footer></Footer>
         </div>
     );

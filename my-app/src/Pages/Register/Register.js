@@ -4,21 +4,31 @@ import { useForm } from 'react-hook-form';
 import { NavLink } from 'react-router-dom';
 import useAuth from './../../Hooks/useAuth';
 import { useHistory } from 'react-router';
+import { useState } from 'react';
 
 
 const Register = () => {
     const { register, handleSubmit,reset} = useForm();
+    const [response,setResponse] = useState({})
+
     const history = useHistory(); 
 
     const {registerUser,user}= useAuth(); 
     const onSubmit = data => {
-        
-        
         registerUser(data.name,data.email,data.password,history)
-        
-        console.log(data)
-        reset();
-        
+        fetch('http://localhost:5000/users',{
+            method:"POST",
+            headers:{"content-type":"application/json"},
+            body:JSON.stringify(data)
+        })
+        .then(res=> {
+            setResponse(res)
+            console.log(res)
+            if(response.status===200){
+                alert("Successfully Registered") 
+                reset(); 
+            }
+        })
     };
     return (
       <div className="mx-auto border w-25 bg-light m-3">

@@ -10,6 +10,7 @@ import ManageOrder from './../Admin/Manage Order/ManageOrder';
 import AddProduct from './../Admin/Add Product/AddProduct';
 import MakeAdmin from './../Admin/Make Admin/MakeAdmin';
 import ManageProduct from './../Admin/ManageProduct/ManageProduct';
+import {useHistory} from 'react-router'
 
 import {
 
@@ -26,10 +27,16 @@ import {
   
 const Dashboard = () => {
 
-    const {user} = useAuth(); 
+    const {user,signOutUser} = useAuth(); 
     const adminEmail = 'admin@admin.com'; 
 
     let { path, url } = useRouteMatch();
+    const history = useHistory(); 
+    const handleLogouot= ()=>{
+        signOutUser()
+        history.push('/')
+    }
+
     return (
         
         <Container>
@@ -41,7 +48,7 @@ const Dashboard = () => {
                     <NavLink className="my-3" to={`${url}/myorder`}>My Order</NavLink>
                     <NavLink className="my-3" to={`${url}/review`}>Review</NavLink>
                     <NavLink className="my-3" to={`${url}/payment`}>Payment</NavLink>
-                    <button className="btn btn-danger" type="button"> Logout</button>
+                    <button onClick={handleLogouot}className="btn btn-danger" type="button"> Logout</button>
                 </Nav>
                
                 </Col>
@@ -68,7 +75,7 @@ const Dashboard = () => {
                     <NavLink className="my-3" to={`${url}/addproduct`}>Add Product</NavLink>
                     <NavLink className="my-3" to={`${url}/manageproduct`}>Manage Product</NavLink>
                     <NavLink className="my-3" to={`${url}/makeadmin`}>Make Admin</NavLink>
-                    <button className="btn btn-danger" type="button"> Logout</button>
+                    <button onClick={handleLogouot} className="btn btn-danger" type="button"> Logout</button>
                 </Nav>
                 </Col>
                 <Col lg={9} xs={12} md={8} >

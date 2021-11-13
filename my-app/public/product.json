@@ -1,0 +1,56 @@
+[
+    {
+      "name": "Camera Bag",
+      "description": "Camera bags feature toploading openings for easy access to their camera and gear and are generally carried over the shoulder or hand strap.",
+      "img": "https://i.ibb.co/jDZCwnv/Bag.jpg",
+      "price":"5USD"
+    },
+    {
+      "name": "DSLR",
+      "description": "digital SLR cameras capture stunning images with cutting-edge speed, ... Unlock your creativity with DSLR cameras from Nikon.",
+      "img": "https://i.ibb.co/mt7CSVF/body.webp",
+      "price":"250USD"
+    },
+    {
+      "name": "Camera Body",
+      "description": "Body only means the camera comes without a lens. The camera will be unable to take a photo without the lens. You will have to buy a lens separately.",
+      "img": "https://i.ibb.co/sP29sm7/body2.jpg",
+      "price":"100USD"
+    },
+    {
+      "name": "Camera Lens",
+      "description": "A standard lens is one with a mid-range focal length, typically around 50mm. They have an angle of view which is roughly the same as the angle that the human ",
+      "img": "https://i.ibb.co/h9rJyCk/lens2.jpg",
+      "price":"50USD"
+    },
+    {
+      "name": "Camera Tripod",
+      "description": "A higher-end tripod with top-notch build quality is simply going to be more reliable, especially over the long term",
+      "img": "https://i.ibb.co/7XJ59Xm/tripod.jpg",
+      "price":"70USD"
+    },
+    {
+      "name": "Classical SLR",
+      "description": "SLR is a digital camera with a mirror system. You look at your subject through the mirror.",
+      "img": "https://i.ibb.co/4FN2QjK/classic.jpg",
+      "price":"90USD"
+    },
+    {
+      "name": "Camera Flash",
+      "description": "SLR is a digital camera with a mirror system. You look at your subject through the mirror.",
+      "img": "https://i.ibb.co/QHtN30K/flash.jpg",
+      "price":"80USD"
+    },
+    {
+      "name": "Cleaner",
+      "description": "SLR is a digital camera with a mirror system. You look at your subject through the mirror.",
+      "img": "https://i.ibb.co/gdSnKph/camera-clean.webp",
+      "price":"100USD"
+    },
+    {
+      "name": "Clssical Camera",
+      "description": "Classical Camera is a with a mirror system. You look at your subject through the mirror.",
+      "img": "https://i.ibb.co/4FN2QjK/classic.jpg",
+      "price":"50USD"
+    }
+  ]

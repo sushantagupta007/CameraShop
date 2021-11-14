@@ -6,12 +6,18 @@ import { Table } from 'react-bootstrap';
 const ManageOrder = () => {
     const [allOrders,setallOrder] = useState([])
     const [singleOrder,setSingleOrder]= useState([]); 
+    let j=0;
+    const [count, setCount] = useState(j)
+
 
     
 
     let i=1;
 
     const handleUpdate=(id)=>{
+        
+        setCount(j++)
+        console.log(count)
         fetch(`https://sleepy-ridge-11982.herokuapp.com/allmyorder/${id}`)
             .then(res=>res.json())
             .then(data=>{
@@ -23,7 +29,6 @@ const ManageOrder = () => {
             headers:{"content-type":"application/json"},
             body:JSON.stringify(singleOrder)
         })
-        
     }
    
     useEffect(()=>{
@@ -33,7 +38,7 @@ const ManageOrder = () => {
                 setallOrder(data)
                 console.log(data)
         })        
-    },[singleOrder.status])
+    },[count])
 
 
     return (
